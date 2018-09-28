@@ -1,0 +1,511 @@
+@borderColor: #ebebeb;
+@blue: #1650a2;
+.financeDetail {
+    max-width: 1200px;
+    margin: 0px auto 50px;
+    font-size: 14px;
+    .list_details {
+        width: 1200px;
+        box-sizing: border-box;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 30px 45px;
+        background-color: @background-color;
+        overflow: hidden;
+        zoom: 1;
+        .label_title {
+            color: @text-color-gray;
+        }
+        .tips {
+            font-size: 12px;
+            color: red;
+            margin-left: 65px;
+            margin-bottom: 10px;
+        }
+        .finance_details {
+            float: left;
+            width: 700px;
+            border-right: 1px solid @line-color;
+            padding-right: 45px;
+            box-sizing: border-box;
+            .title {
+                border-bottom: 1px solid @line-color;
+                padding-bottom: 25px;
+                .name {
+                    font-size: 24px;
+                }
+            }
+            .number_list {
+                padding: 30px 0 25px;
+                border-bottom: 1px solid @line-color;
+                display: -webkit-flex;
+                /* Safari */
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                .data_li {
+                    padding-left: 60px;
+                    background-size: 50px auto;
+                    .data {
+                        font-size: 28px;
+                    }
+                    .number {
+                        margin-bottom: 5px;
+                        font-size: 18px;
+                    }
+                    .notes {
+                        color: @text-color-gray;
+                    }
+                }
+            }
+            .data_li:first-child {
+                background: url(/static/img/financeList/profit@2x.png) no-repeat left center;
+            }
+            .data_li:nth-child(2) {
+                background: url(/static/img/financeList/calendar@2x.png) no-repeat left center;
+            }
+            .data_li:last-child {
+                background: url(/static/img/financeList/financing@2x.png) no-repeat left center;
+            }
+            .mode_list {
+                padding: 20px 0 10px;
+                border-bottom: 1px solid @line-color;
+                .mode_li {
+                    float: left;
+                    width: 327px;
+                    margin-bottom: 10px;
+                }
+            }
+            .cycle {
+                padding: 20px 0;
+                .cycle_title {
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                } // .cycle_line{
+                //   text-align: center;
+                //   .el-step__head{
+                //     .el-step__line{
+                //       background-color: @cycle-color-light-gray;
+                //       margin-left: 0;
+                //       left: 0;
+                //       right: 0;
+                //     }
+                //     .el-step__icon{
+                //       width: 12px;
+                //       height: 12px;
+                //       background-color: @cycle-color-deep-gray;
+                //       border:none;
+                //       .el-step__icon-inner{
+                //         display: none;
+                //       }
+                //     }
+                //   }
+                // }.el-step:last-of-type .el-step__line {
+                //   display: block;
+                // }.el-step:first-of-type .el-step__line {
+                //   background-color: @cycle-color-blue;
+                //   .el-step__icon{
+                //     background-color: @cycle-color-blue;
+                //   }
+                // }.el-step__head.is-wait {
+                //     color:  @cycle-color-light-gray;
+                //     border:none;
+                // }
+            }
+        }
+        .quota {
+            float: left;
+            margin-left: 35px;
+            width: 375px;
+            .investDataNull{
+                width: 375px;
+                height: 270px;
+                background: url(/static/img/financeList/capital_down.png) no-repeat center center;
+            }
+            .progress {
+                .progressbar {
+                    // .el-progress-bar {
+                    //     width: 96%;
+                    // }
+                    .el-progress__text {
+                        margin-top: -28px !important;
+                        margin-left: -10px !important;
+                    }
+                }
+            }
+            .amount {
+                margin-bottom: 30px;
+                color: @text-color-gray;
+                .num {
+                    font-size: 32px;
+                }
+            }
+            .balance {
+                float: left;
+                width: 100%;
+                margin: 30px 0 15px;
+                .put {
+                    float: right;
+                }
+            }
+            .money {
+                .money_input {
+                    width: 305px;
+                    height: 49px;
+                    text-indent: 1em;
+                }
+                ::-moz-placeholder {
+                    color: #bbbbbb;
+                }
+                ::-webkit-input-placeholder {
+                    color: #bbbbbb;
+                }
+                :-ms-input-placeholder {
+                    color: #bbbbbb;
+                }
+            }
+            .profit {
+                margin-top: 14px;
+            }
+            .invest_btn {
+                width: 100%;
+                height: 50px;
+                font-size: 20px;
+                margin: 15px 0;
+                cursor: pointer;
+            }
+            .agreement {
+                color: @text-color-gray;
+                text-align: center;
+                .model {
+                    margin-left: 10px;
+                }
+                input[type="checkbox"] {
+                    -webkit-appearance: none;
+                    background: #fff url(/static/img/financeList/noselected.png);
+                    height: 22px;
+                    /*高度*/
+                    vertical-align: middle;
+                    width: 22px;
+                    &:checked {
+                        &::before {
+                            border: 0 none;
+                        }
+                    }
+                }
+                input[type="checkbox"]:checked {
+                    background: #fff url(/static/img/financeList/selected.png);
+                }
+                .loanAgree {
+                    .el-dialog__wrapper {
+                        .el-dialog {
+                            border-radius: 4px;
+                            .el-dialog__header {
+                                padding: 18px 20px 14px;
+                                border-top-left-radius: 4px;
+                                border-top-right-radius: 4px;
+                                .el-dialog__title {
+                                    color: #fff;
+                                }
+                                background: #1650a2;
+                                .el-dialog__headerbtn {
+                                    .el-dialog__close {
+                                        &::before {
+                                            font-size: 25px;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    p {
+                        text-align: justify;
+                    }
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .material {
+        width: 100%;
+        background-color: @background-color;
+        margin-top: 33px;
+        .el-tabs__header {
+            margin: 0;
+            .el-tabs__nav {
+                left: 25%;
+                .el-tabs__active-bar {
+                    background-color: @text-color-blue;
+                }
+                .el-tabs__item {
+                    font-size: 18px;
+                    height: 85px;
+                    line-height: 85px;
+                    padding: 0 55px;
+                }
+                .is-active {
+                    color: @text-color-blue;
+                }
+                .el-tabs__item:hover {
+                    color: @text-color-blue;
+                }
+            }
+        }
+        .el-tabs__content {
+            padding: 45px;
+        }
+        .marginT45 {
+            margin-top: 45px;
+        } //项目介绍
+        .proIntroduce {
+            .title {
+                font-size: 20px;
+                color: #000;
+                position: relative;
+                padding-left: 16px;
+                &::before {
+                    content: ' ';
+                    position: absolute;
+                    left: -5px;
+                    top: 2px;
+                    width: 4px;
+                    height: 20px;
+                    background: #1650a2;
+                }
+            }
+            .auditPro {
+                table {
+                    width: 100%;
+                    margin-top: 34px;
+                    display: inline-table;
+                    td {
+                        flex: 1;
+                        border: 1px solid #ebebeb;
+                        height: 65px;
+                        text-align: center;
+                        vertical-align: middle;
+                        color: #666;
+                        font-size: 17px;
+                        border-collapse: collapse;
+                        &:nth-child(odd) {
+                            background: #f6f6f6;
+                            color: #000;
+                            font-size: 16px;
+                        }
+                        .auditedIco {
+                            display: inline-block;
+                            width: 36px;
+                            height: 27px;
+                            background: url('/static/img/financeList/complete@2x.png') no-repeat center center;
+                        }
+                        b {
+                            font-weight: normal;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .proInfos {
+            .ins {
+                text-align: center;
+                .leftIcon,
+                .rightIcon {
+                    margin-top: -211px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+                .leftIcon {
+                    margin-right: 34px;
+                }
+                .rightIcon {
+                    margin-left: 34px;
+                }
+                img {
+                    display: inline-block;
+                }
+                div.imgs {
+                    display: inline-block;
+                    margin-top: 62px;
+                    width: 892px;
+                    height: 235px;
+                    overflow: hidden;
+                    position: relative;
+                    div {
+                        position: absolute;
+                        width: 2000px;
+                        white-space: nowrap;
+                        text-align: left;
+                        img {
+                            display: inline-block;
+                            width: 197px;
+                            height: 235px;
+                            overflow: hidden;
+                            margin-right: 28px;
+                            &:nth-child(4n) {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .el-carousel__item h3 {
+            color: #475669;
+            font-size: 18px;
+            opacity: 0.75;
+            line-height: 300px;
+            margin: 0;
+        }
+        .el-carousel__item:nth-child(2n) {
+            background-color: #99a9bf;
+        }
+        .el-carousel__item:nth-child(2n+1) {
+            background-color: #d3dce6;
+        } //安全保障
+        .safetyGuarantee {
+            padding: 0 60px;
+            ul {
+                li {
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 65px;
+                    .img {
+                        flex: 1;
+                    }
+                    .txt {
+                        flex: 9;
+                        font-size: 16px;
+                        color: #666;
+                        line-height: 20px;
+                        b {
+                            display: inline-flex;
+                            font-size: 20px;
+                            color: #000;
+                            margin-bottom: 17px;
+                        }
+                        p {
+                            line-height: 30px;
+                        }
+                    }
+                }
+            }
+        } //投资记录
+        .investmentRecords {
+            padding: 0 3.75rem;
+            table {
+                width: 1000px;
+                display: inline-table;
+                td {
+                    height: 69px;
+                    text-align: center;
+                    border: 1px solid #ebebeb;
+                    flex: 1;
+                    border-collapse: collapse;
+                    &.no-data {
+                        height: 0px;
+                    }
+                }
+                thead {
+                    background: #f5f8fb;
+                }
+            }
+        }
+    }
+}
+
+// 投资弹框
+.investDialog {
+    .el-dialog__wrapper {
+        .el-dialog {
+            width: 55%;
+            color: #000;
+            .el-dialog__header {
+                padding: 20px 45px;
+                font-size: 25px;
+                height: 25px;
+                border-bottom: 1px solid @borderColor;
+                line-height: 25px;
+                button {
+                    .el-dialog__close {
+                        &.el-icon {
+                            &::before {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+            .el-dialog__body {
+                padding: 20px 0;
+                .con {
+                    padding: 10px 45px;
+                    .title {
+                        float: left;
+                        width: 114px;
+                        height: 23px;
+                        text-align: left;
+                        font-size: 18px;
+                        color: #000;
+                    }
+                    .ins {
+                        display: inline-block;
+                        color: #666;
+                        font-size: 15px;
+                        dl {
+                            height: 33px;
+                            line-break: 33px;
+                            dt {
+                                float: left;
+                            }
+                            dd {
+                                float: left;
+                            }
+                        }
+                        .btns {
+                            margin-top: 25px;
+                            button {
+                                float: left;
+                                width: 149px;
+                                height: 48px;
+                                // line-height: 48px;
+                                font-size: 18px;
+                                border-radius: 4px;
+                                cursor: pointer;
+                                background: @blue;
+                                color: #fff;
+                                margin-right: 32px;
+                                &:last-child {
+                                    float: right;
+                                    border: 1px solid @blue;
+                                    background: #fff;
+                                    color: @blue;
+                                }
+                            }
+                        }
+                    }
+                    &.profit {
+                        background: #f8fafc;
+                        border: 1px solid @borderColor;
+                        border-width: 1px 0;
+                        background: #f8fafc;
+                        padding-top: 23px;
+                        padding-bottom: 5px;
+                    }
+                    &.pwd {
+                        padding: 20px 45px 10px;
+                        line-height: 41px;
+                        .ins {
+                            .forgetPwd {
+                                color: blue;
+                                margin-left: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

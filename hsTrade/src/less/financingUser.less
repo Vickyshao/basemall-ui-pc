@@ -1,0 +1,105 @@
+.inlineBlock {
+    display: inline-block;
+}
+
+.font28 {
+    font-size: 28px;
+}
+
+.topTitle {
+    font-size: 22px;
+    color: #000;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 21px;
+    padding-bottom: 21px;
+}
+
+.query {
+    margin-bottom: 21px;
+    ul {
+        align-items: baseline;
+        li {
+            display: inline-flex;
+            align-items: baseline;
+            margin-left: 30px; // flex-grow: 3;
+            // flex: 1;
+            text-align: left;
+            span {
+                padding-right: 10px;
+            }
+            .queryBtn {
+                width: 97px;
+                height: 40px;
+                background: #1650a2;
+                border-radius: 4px;
+                font-size: 17px;
+                vertical-align: middle;
+                color: #fff;
+                cursor: pointer;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+// 我的投资页面
+.investmentElTabs {
+    .tabIns {
+        border: 1px solid #ebebeb;
+        .query {
+            padding: 22px;
+            margin-bottom: 0;
+            background: #f5f8fb;
+        }
+        .table {
+            &.proTbl {
+                border-width: 1px 0 0;
+                tr {
+                    &:last-child {
+                        border-width: 0;
+                    }
+                }
+                tbody {
+                    td {
+                        font-size: 14px;
+                        &:first-child,
+                        &:last-child {
+                            color: #1650a2;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//消息列表页面
+.messagesIns {
+    ul {
+        li {
+            color: #000;
+            border-bottom: 1px solid #ebebeb;
+            font-size: 14px;
+            padding: 15px 0;
+            // line-height: 62px;
+            .time {
+              float: right;
+              color: #666;
+            }
+            .title{
+              color:#1650A2;
+              margin-right: 10px;
+            }
+        }
+        li:hover{
+            cursor: pointer;
+            background-color:#F5F8FB;
+        }
+        .read{
+            font-weight: bold;
+        }
+    }
+}

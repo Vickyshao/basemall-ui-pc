@@ -1,0 +1,183 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td { margin: 0; padding: 0; border: 0;}
+html,body {background: #f1f1f1;}
+body,button,input,select,textarea { font-size: 12px; font-family: 'Microsoft Yahei','微软雅黑', \5FAE\8F6F\96C5\9ED1,'宋体',\5b8b\4f53,arial,'Hiragino Sans GB',Tahoma,Arial,Helvetica; background-color: #FFFFFF;outline:none;outline:none;}
+ul,ol,li,dl,dd,dt{list-style: none;}
+em,i { font-style: normal; }
+a { text-decoration: none;color: #1650A2; }
+a:hover { text-decoration: none; }
+legend { color: #000; }
+fieldset{ border: 0; }
+label,button { cursor: pointer; }
+img{display:inline-block;}
+/*解决IE图片缩放失真*/
+img { -ms-interpolation-mode: bicubic; }
+/*清除浮动*/
+.clearfix:after { display: block; width: 100%; height: 0; content: ""; clear: both; }
+.clearfix { zoom: 1; }
+.clear:after { display: block; width: 100%; height: 0; content: ""; clear: both; }
+/*连续英文、数字换行*/
+.wordwrap { word-break: break-all; word-wrap: break-word; }
+/*单行文字超出显示省略号*/
+.omg{overflow: hidden; text-overflow: ellipsis; white-space:nowrap;}
+.fl{float: left;}
+.fr{float: right;}
+.m-r-xs{margin-right: 5px;}
+.m-r{margin-right: 10px;}
+.m-r-md{margin-right: 20px;}
+.m-l-xs{margin-left: 5px;}
+.m-l{margin-left: 10px;}
+.m-l-md{margin-left: 20px;}
+.text-primary{
+    color: #1650a2!important;
+}
+.text-href{
+    color: #1650a2!important;
+    cursor: pointer;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.text-success{
+    color: #3cb239!important;
+}
+.text-gray{
+    color: #666!important;
+}
+.text-center {
+    text-align: center;
+    margin: 0 auto;
+}
+.no-data {
+    color: rgb(153, 153, 153);
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.color-red {
+    color: red;
+}
+.text-disabled{
+    color: #bbb!important;
+}
+.text-danger{
+    color: #f00!important;
+}
+.text-warn{
+    color: #F88D00!important;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.table {
+    border-collapse:collapse;
+    border-spacing:0;
+    width: 100%;
+    border: 1px solid #ebebeb;
+    border-bottom-width: 0;
+    font-size: 14px;
+    thead {
+        background: #f5f8fb;
+        th{
+            padding: 18px 10px;
+            font-weight: normal;
+            color: #666;
+            border-bottom: 1px solid #ebebeb;
+        }
+    }
+    tr {
+        td {
+            border-bottom: 1px solid #ebebeb;
+            padding: 15px 10px;
+            border-collapse: collapse;
+            text-align: center;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            &.success {
+                color: #3cb239;
+            }
+            &.false {
+                color: #bbb;
+            }
+            &.appling {
+                color: red;
+            }
+        }
+    }
+    tr:hover{
+        background-color: #f5f8fb;
+    }
+}
+
+input[type="radio"]{
+	position: relative;
+	width: 16px;
+	height: 16px;
+	min-height: 16px;
+	background: #fff;
+	border: 1px solid #B2AEBC;
+	border-radius:100%;
+    -webkit-appearance: none;
+    &:checked{
+        &::before{
+            content: '';
+            position: absolute;
+            height: 8px;
+            min-height: 8px;
+            left: 3px;
+            top: 3px;
+            background: #1650a2;
+            width: 8px;
+            border-radius: 100%;
+        }
+        &::after{
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            height: 16px;
+            min-height: 16px;
+            left: -1px;
+            top: -1px;
+            border: 1px solid #1650a2;
+            width: 16px;
+            border-radius: 100%;
+        }
+    }
+}
+input[type="checkbox"] {
+    position: relative;
+    white-space: nowrap;
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #b2aebc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    min-height: 16px;
+    background-color: #fff;
+    z-index: 1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    &:checked{
+        &::before{
+            content: "";
+            box-sizing: content-box;
+            border: 1px solid #1650a2;
+            border-left: 0;
+            border-top: 0;
+            height: 7px;
+            left: 5px;
+            position: absolute;
+            top: 2px;
+            transform: rotate(45deg) scaleY(0);
+            width: 4px;
+            transition: transform .15s cubic-bezier(.71,-.46,.88,.6) .05s;
+            transform-origin: center;
+            transform: rotate(45deg) scaleY(1);
+        }
+    }
+}

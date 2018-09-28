@@ -1,0 +1,427 @@
+.chat-wrapper {
+    margin: 22px auto;
+}
+.chat-container {
+    width: 1120px;
+    margin: 0 auto;
+    background: #fff;
+    .color-blue, .color-green, .color-orange {
+        border-radius: 4px;
+        color:#fff;
+    }
+    .color-blue {
+        background: #1650a2;
+        &:not(div):hover {
+            background: darken(#1650a2, 7%);
+        }
+    }
+    .color-green {
+        background: #36af35;
+        &:not(div):hover {
+            background: darken(#36af35, 7%);
+        }
+    }
+    .color-orange {
+        background: #ff9700;
+        &:hover {
+            background: darken(#ff9700, 7%);
+        }
+    }
+    .marginB0 {
+        margin-bottom: 0 !important;
+    }
+    .top {
+        .title {
+            font-size: 21px;
+            height: 56px;
+            line-height: 3.5rem;
+            padding-left: 28px;
+            color: #fff;
+            font-weight: 200;
+        }
+    }
+    .bot {
+        width: 94.5%;
+        margin: 0 auto;
+        margin-top: 22px;
+        .left {
+            float: left;
+            width: 700px;
+            .tops {
+                border: 1px solid #ebebeb;
+                margin-bottom: 15px;
+            }
+            .seeMore {
+                font-size: 14px;
+                color: #1650a2;
+                width: 100%;
+                height: 76px;
+                line-height: 76px;
+                text-align: center;
+                cursor: pointer;
+            }
+            .chat-box {
+                height: 500px;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                margin-bottom: 16px;
+                &::-webkit-scrollbar {
+                    width: 6px;
+                    background-color: #f6f6f6;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: lighten(#36af35, 5%);
+                    border-radius: 4px;
+                    &:hover {
+                        background-color: #36af35;
+                    }
+                }
+                &.chat-box-supply {
+                    &::-webkit-scrollbar {
+                        background-color: #f6f6f6;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background-color: lighten(#1650a2, 5%);
+                        &:hover {
+                            background-color: #1650a2;
+                        }
+                    }
+                }
+                @media (max-width:1400px) {
+                    height: 350px;
+                }
+                .chat-list {
+                    padding: 30px 20px 0;
+                    display: inline-block;
+                    width: 100%;
+                    box-sizing: border-box;
+                    .chat-item {
+                        padding-left: 67px;
+                        background-position: left top;
+                        background-repeat: no-repeat;
+                        background-size: 42px 39px;
+                        margin-bottom: 30px;
+                        .chat-content-top {
+                            color: #bbb;
+                            font-size: 12px;
+                        }
+                        &.self {
+                            float: right;
+                            background-position: right 17px;
+                            padding-right: 56px;
+                            background-image: url("/static/img/com/inquiry2@2x.png");
+                            &.offer {
+                                background-image: url("/static/img/com/offer2@2x.png");
+                                height: 36px;
+                                width: 100%;
+                                text-align: right;
+                                font-size: 14px;
+                                padding-top: 21px;
+                            }
+                        }
+                        &.buySelf {
+                            padding-left: 73px;
+                            background-position: right 7px;
+                            background-image: url("/static/img/com/buySelf.png");
+                            &.offer {
+                                background-image: url("/static/img/com/offer2@2x.png");
+                            }
+                        }
+                        &.other {
+                            float: left;
+                            padding-left: 58px;
+                            // background-image: url("/static/img/com/reply2@2x.png");
+                            background: url(/static/img/com/reply2@2x.png) no-repeat top left;
+                            background-position: left 17px;
+                            height: 48px;
+                            width: 100%;
+                            text-align: left;
+                            font-size: 14px;
+                            padding-top: 22px;
+                            .chat-content {
+                                &::before{
+                                    content: "";
+                                    position: absolute;
+                                    right: auto;
+                                    left: -19px;
+                                    top: 17px;
+                                    border: 10px solid #f6f6f6;
+                                    border-left-color: transparent;
+                                    border-top-color: transparent;
+                                    border-bottom-color: transparent;
+                                }
+                            }
+                        }
+                        &.buyer {
+                            background-position: left 7px;
+                            padding-left: 56px;
+                            background-image: url("/static/img/com/inquiry2@2x.png");
+                            .chat-content {
+                                 &::before {
+                                     content: "";
+                                     position: absolute;
+                                     right: auto;
+                                     left: -19px;
+                                     top: 17px;
+                                     border: 10px solid #f6f6f6;
+                                     border-left-color: transparent;
+                                     border-top-color: transparent;
+                                     border-bottom-color: transparent;
+                                 }
+                             }
+
+                        }
+                        .chat-content {
+                            position: relative;
+                            background: #f1f1f1;
+                            border-radius: 23px;
+                            padding: 14px 16px;
+                            color: #000;
+                            max-width: 485px;
+                            word-break: break-all;
+                            margin-top: 10px;
+                            font-size: 14px;
+                            line-height: 25px;
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                right: -18px;
+                                top: 17px;
+                                border: 10px solid #f6f6f6;
+                                border-right-color: transparent;
+                                border-top-color: transparent;
+                                border-bottom-color: transparent;
+                            }
+                        }
+                        .order {
+                            position: relative;
+                            color: #141414;
+                            word-break: break-all;
+                            display: inline-block;
+                            padding: 0 5px;
+                            font-size: 14px;
+                            line-height: 25px;
+                        }
+                    }
+                    .created {
+                        width: 573px;
+                        font-size: 1rem;
+                        margin: 40px auto 30px;
+                        line-height: 25px;
+                    }
+                }
+            }
+            .chat-select-option {
+                line-height: 40px;
+                margin-bottom: 16px;
+                &>div {
+                    display: inline-block;
+                    width: 700px;
+                    height: 121px;
+                    border: 1px solid #ebebeb;
+                    background: #f5f8fb;
+                    padding: 16px 0 0 20px;
+                    box-sizing: border-box;
+                    &>span {
+                        font-size: 14px;
+                    }
+                    .btn {
+                        width: 94px;
+                        height: 44px;
+                        margin-left: 30px;
+                        margin-top: 16px;
+                        font-size: 19px;
+                        border: 0;
+                    }
+                    .color-green {
+                        &.el-button--primary, &.el-button--primary:hover {
+                            color: #36af35;
+                        }
+                    }
+                }
+                .offer {
+                    &>div {
+                        float: left;
+                        width: 100%;
+                        margin-bottom: 21px;
+                        position: relative;
+                        span {
+                            font-size: 14px;
+                        }
+                        .btn {
+                            span {
+                                font-size: 19px;
+                            }
+                        }
+                    }
+                    .tips {
+                        position: absolute;
+                        color: red;
+                        width: 100%;
+                        left: 7px;
+                        top: 29px;
+                        font-size: 12px;
+                    }
+                    .inputMsgs {
+                        width: 377px; 
+                        height: 40px; 
+                        padding: 10px;
+                        border:1px solid #ebebeb;
+                        font-size: 14px;
+                        height: 26px;
+                    }
+                }
+                .partners {
+                    float: right;
+                    font-size: 14px;
+                    &>div {
+                        float: left;
+                        width: 100%;
+                    }
+                    .prices {
+                        width: 90%;
+                        background: #fff;
+                        border: 1px solid #ebebeb;
+                        border-radius: 4px;
+                        span {
+                            float: left;
+                            width: 49%;
+                            text-align: center;
+                            font-size: 18px;
+                            &:first-child {
+                                border-right: 1px solid #ebebeb;
+                            }
+                            em {
+                                color: #666;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    span {
+                        display: inline-block;
+                    }
+                    .btn {
+                        margin-left: 0;
+                        margin-top: 4px;
+                        &.createOrder {
+                            background: #ff6e01;
+                            &:hover {
+                                background: darken(#ff6e01, 7%);
+                            }
+                        }
+                    }
+                }
+                .input-width {
+                    width: 507px;
+                    input {
+                        width: 507px;
+                    }
+                }
+                .w150 {
+                    width: 150px;
+                }
+            }
+        }
+
+        .right {
+            float: right;
+            width: 350px;
+            // max-height: 660px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+                width: 6px;
+                background-color: #f6f6f6;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(22, 80, 162, .7);
+                border-radius: 4px;
+                &:hover {
+                    background-color: #1650a2;
+                }
+            }
+            @media (max-width:1400px) {
+                // max-height: 510px;
+            }
+            .title {
+                font-size: 22px;
+                color: #000;
+                padding: 0 0 10px 37px;
+                border-bottom: 1px solid #ebebeb;
+                position: relative;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 12px;
+                    top: 4px;
+                    width: 4px;
+                    height: 23px;
+                    border-radius: 2px;
+                    background: #1650a2;
+                }
+                &.buy {
+                    margin-bottom: 0;
+                    &:before {
+                        background: #36af35;
+                    }
+                }
+            }
+            .tag-list {
+                padding: 21px 0 0 37px;
+                border-bottom: 1px solid #ebebeb;
+                font-size: 14px;
+                .tag {
+                    padding: 11px 13px;
+                    font-size: 14px;
+                    border-radius: 3px;
+                    border: 1px solid #1650a2;
+                    color: #1650a2;
+                    margin: 0 15px 15px 0;
+                    cursor: default;
+                }
+            }
+            .query {
+                padding: 30px 0 0 37px;
+                line-height: 34px;
+                font-size: 16px;
+                p {
+                    color: #000;
+                    margin-bottom: 12px;
+                    label {
+                        display: inline-block;
+                        cursor: text;
+                        width: 90px;
+                        color: #666;
+                    }
+                }
+            }
+            .params {
+                padding: 30px 0 0 37px;
+                line-height: 34px;
+                font-size: 16px;
+                p {
+                    color: #000;
+                    margin-bottom: 12px;
+                    label {
+                        display: inline-block;
+                        cursor: text;
+                        width: 90px;
+                        color: #666;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.chat-dialog{
+    .el-dialog{
+        .el-dialog__header{
+            background: #F6F6F6;
+        }
+        .el-dialog__body{
+            padding: 16px 20px;
+        }
+    }
+}

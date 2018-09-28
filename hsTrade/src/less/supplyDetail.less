@@ -1,0 +1,201 @@
+ .class_list{
+    max-width: 1200px;
+    padding: 30px 40px;
+    margin-top:35px;
+    background-color: @background-color;
+    color: @text-color-gray;
+    text-align: left;
+    .class_sort{
+        margin-bottom: 30px;
+    }
+    .list_name{
+        text-align: left;
+        font-size: 18px;
+        height: 18px;
+        line-height: 18px;
+        border-left: 2px solid @text-color-blue;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+    .same_product{
+        margin: 30px 0;
+    }
+    .describe_con{
+        text-align: left;
+        width: 100%;
+        background-color: #f5f8fb;
+        padding: 18px 20px;
+        box-sizing: border-box;
+        .describe{
+           background-color: #fff;
+           border:1px solid @line-color;
+           padding: 20px;
+           box-sizing: border-box;
+        }
+    }
+    .supply_list{
+        .goods_list{
+            text-align: left;
+            width: 250px;
+            border: 1px solid @line-color;
+            margin-bottom: 40px;
+            float:left;
+            margin-right: 37px;
+            .goods_img{
+                width: 250px;
+                height: 200px;
+                cursor: pointer;
+                border-bottom: 1px solid @line-color;
+            }
+            .goods_num{
+                padding: 15px 15px;
+                border-bottom: 1px solid @line-color;
+                .name{
+                font-size: 16px;
+                }
+                .num{
+                font-size: 14px;
+                margin: 10px 0;
+                }
+            }
+            .goods_price{
+                padding: 10px 20px;
+                .price{
+                font-size: 20px;
+                }
+            }
+        }
+        .goods_list:nth-child(4n){
+            margin: 0;
+        }
+  }
+}
+// 商品详情
+.list_detail{
+  width: 1200px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin:0 auto;
+  padding: 30px 45px;
+  background-color: @background-color;
+  overflow: hidden;
+  zoom:1;
+  .goods_details{
+    float: left;
+    width: 490px;
+    margin-right: 55px;
+    box-sizing: border-box;
+    .goodImg{
+        width: 500px;
+        height: 500px;
+        border:1px solid @line-color;
+    }
+  }
+  .goods_offer{
+    float: left;
+    width: 555px;
+    box-sizing: border-box;
+    .title{
+      padding-bottom: 10px;
+      padding-left: 23px;
+      font-size: 24px;
+    }
+    .priceAndNum{
+         background-color: #f1f1f1;
+         padding: 10px 25px;
+         vertical-align: middle;
+         color: @text-color-gray;
+         position: relative;
+        .price{
+            float: left;
+            span{
+                margin-left: 10px;
+                font-size: 18px;
+                max-width: 100px;
+                b{
+                font-size: 28px;
+                }
+            }
+        }
+        .num{
+            position: absolute;
+            left:250px;
+            line-height: 37px;
+            margin-left:60px;
+        }
+    }
+    .parameter{
+      padding:20px 0 10px 23px;
+      box-sizing: border-box;
+      border-bottom: 1px solid @line-color;
+      li{
+        width: 265px;
+        float: left;
+        margin-bottom: 10px;
+        label{
+          color: @text-color-gray;
+          margin-right: 8px;
+        }
+      }
+    }
+    .offer{
+      padding: 20px 23px 5px;
+      position: relative;
+      border-bottom: 1px solid @line-color;
+      .el-row{
+        margin-bottom: 10px;
+        .el-radio-group{
+          width: 300px;
+          label span{
+            // margin-left:10px;
+            // margin-bottom:10px;
+            border-radius: 5px;
+            padding: 11px 11px;
+            border: 1px solid @line-color;
+          }label span:hover{
+            color: @text-color-blue;
+            border: 1px solid @text-color-blue;
+            background-color: @background-color;
+            box-shadow: none;
+          }label.is-active span{
+            color: @text-color-blue;
+            border: 1px solid @text-color-blue;
+            background-color: @background-color;
+            box-shadow: none;
+          }
+          .el-radio-button__inner{
+            max-width: 84px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .is-disabled .el-radio-button__inner:hover{
+            color: #c0c4cc;
+            border: 1px solid @line-color;
+            background-color: @background-color;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+    .offer_num{
+        padding: 20px 23px;
+        .num_name{
+            margin-right:20px;
+        }
+    }
+    .order_btn{
+        width:136px;
+        height:48px;
+        font-size: 20px;
+    }
+    .btn_offer{
+        margin-left: 23px;
+        border:1px solid @text-color-blue;
+        background-color: @text-color-white;
+        span{
+        color: @text-color-blue;
+      }
+    }
+  }
+}
